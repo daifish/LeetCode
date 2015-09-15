@@ -56,6 +56,10 @@ public class Solution {
                         break;
                     }
                 }
+                /*此时跳出while循环有两种情况
+                1是没有进位，即l2.next!=null 直接将L2接到result后面即可
+                2是循环到了最后一位，此时将进位考虑上进行处理
+                */
                 if (l2.next != null) {
                     result.next = l2.next;
                 } else {
