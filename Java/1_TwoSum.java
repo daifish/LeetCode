@@ -5,6 +5,7 @@ Url:https://leetcode.com/problems/two-sum/
 Author:daiyu
 Time:2015-9-15
 Language:Java
+额外的思路：对数组排序，从两端开始向中间靠拢，找到两者和为target即可
 */
 public Class Solution{
 	public int[] twoSum(int[] nums, int target) {
