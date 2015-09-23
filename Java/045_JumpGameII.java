@@ -14,11 +14,11 @@ public class Solution {
         }
         
         int maxcover = 0;
-        int lastcover = 0;
+        int lastcover = 0;//step - 1步所能到的最远距离
         int step = 0;
         
         for (int i = 0; i <= maxcover &&  i < nums.length; i ++) {
-            if (i > lastcover) {
+            if (i > lastcover) {// 此时已经超过step上一步能到达的最远距离 step ＋ 1
                 step ++;
                 lastcover = maxcover;
             } 
