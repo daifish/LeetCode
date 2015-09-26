@@ -5,7 +5,10 @@ Url:https://leetcode.com/problems/two-sum/
 Author:daiyu
 Time:2015-9-15
 Language:Java
-额外的思路：对数组排序，从两端开始向中间靠拢，找到两者和为target即可
+本题解法：暴力破解
+额外的思路：1.对数组排序，从两端开始向中间靠拢，找到两者和为target即可
+2.利用hashmap，将当前nums[i]的index值作为value，nums[i]作为key，存入hashmap，判断如果target－nums[i]的值存在即返回此两个hashmap
+对应的值即可，如果不存在将该值与index存入hashmap
 */
 public Class Solution{
 	public int[] twoSum(int[] nums, int target) {
