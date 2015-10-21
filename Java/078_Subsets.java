@@ -19,24 +19,24 @@ demo：1，2，3
 再添加空集
 */
 public class Solution {
-    public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+    public ArrayList<List<Integer>> subsets(int[] S) {
 	if (S == null)
 		return null;
  
 	Arrays.sort(S);
  
-	ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+	ArrayList<List<Integer>> result = new ArrayList<List<Integer>>();
  
 	for (int i = 0; i < S.length; i++) {
-		ArrayList<ArrayList<Integer>> temp = new ArrayList<ArrayList<Integer>>();
+		ArrayList<List<Integer>> temp = new ArrayList<List<Integer>>();
  
 		//get sets that are already in result
-		for (ArrayList<Integer> a : result) {
+		for (List<Integer> a : result) {
 			temp.add(new ArrayList<Integer>(a));
 		}
  
 		//add S[i] to existing sets
-		for (ArrayList<Integer> a : temp) {
+		for (List<Integer> a : temp) {
 			a.add(S[i]);
 		}
  
