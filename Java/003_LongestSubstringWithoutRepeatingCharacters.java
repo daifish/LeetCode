@@ -28,3 +28,22 @@ public class Solution {
         return result;
     }
 }
+//22ms
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int result = 0;
+        int left = 0;
+        int length = s.length();
+        Map<Character, Integer> map = new HashMap<Character, Integer>();
+        
+        for (int i = 0; i < length; i ++) {
+            if (map.containsKey(s.charAt(i)) && map.get(s.charAt(i)) >= left) {
+                left = map.get(s.charAt(i)) + 1;
+            }
+            map.put(s.charAt(i), i);
+            result = result > i - left + 1 ? result : i - left + 1;
+        }
+        
+        return result;
+    }
+}
