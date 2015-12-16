@@ -5,6 +5,7 @@
  *     ListNode next;
  *     ListNode(int x) { val = x; }
  * }
+ * http://cuisuqiang.iteye.com/blog/2019157 priorityQueue用法
  */
 public class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
