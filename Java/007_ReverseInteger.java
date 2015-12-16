@@ -46,11 +46,7 @@ public class Solution {
         
         try {
             res = Integer.parseInt(result);
-            if (x > 0) {
-                return res;
-            } else {
-                return -res;
-            }
+            return x > 0 ? res : -res;
         } catch(Exception e) {
             return 0;
         }
