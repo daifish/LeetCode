@@ -29,3 +29,32 @@ public class Solution {
         return Integer.parseInt(String.valueOf(result));        
     }
 }
+//6ms
+/*
+转换成字符串处理 对于最后的越界用try catch捕获处理
+*/
+public class Solution {
+    public int reverse(int x) {
+        String result = "";
+        int res = 0;
+        
+        String tmp = String.valueOf(Math.abs(x));
+        
+        for (int i = tmp.length() - 1; i >= 0 ; i --) {
+            result += tmp.charAt(i);
+        }
+        
+        try {
+            res = Integer.parseInt(result);
+            if (x > 0) {
+                return res;
+            } else {
+                return -res;
+            }
+        } catch(Exception e) {
+            return 0;
+        }
+        
+        
+    }
+}
